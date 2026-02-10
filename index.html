@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Kongu + GUVI Collaboration</title>
+		<style>
+			:root {
+				color-scheme: light;
+				--bg: #ffffff;
+				--surface: #f6f7f9;
+				--text: #101828;
+				--muted: #475467;
+				--border: #e4e7ec;
+				--accent: #2e6cf6;
+				--accent-weak: rgba(46, 108, 246, 0.12);
+				--radius: 14px;
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				margin: 0;
+				font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+				line-height: 1.5;
+				color: var(--text);
+				background: var(--bg);
+			}
+
+			a {
+				color: var(--accent);
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+
+			.container {
+				max-width: 980px;
+				margin: 0 auto;
+				padding: 28px 18px;
+			}
+
+			.topbar {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 12px;
+				padding: 14px 18px;
+				border: 1px solid var(--border);
+				border-radius: var(--radius);
+				background: linear-gradient(180deg, #ffffff 0%, var(--surface) 100%);
+			}
+
+			.brand {
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+			}
+			.brand-title {
+				font-weight: 700;
+				letter-spacing: 0.2px;
+			}
+			.brand-subtitle {
+				color: var(--muted);
+				font-size: 13px;
+			}
+
+			.nav {
+				display: flex;
+				gap: 14px;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+			}
+			.nav a {
+				font-size: 14px;
+				color: var(--muted);
+			}
+			.nav a:hover {
+				color: var(--text);
+			}
+
+			.hero {
+				margin-top: 18px;
+				padding: 22px 18px;
+				border: 1px solid var(--border);
+				border-radius: var(--radius);
+				background: linear-gradient(135deg, var(--accent-weak) 0%, #ffffff 55%);
+			}
+
+			.hero h1 {
+				margin: 0 0 10px;
+				font-size: 34px;
+				line-height: 1.15;
+			}
+			.hero p {
+				margin: 0;
+				color: var(--muted);
+				max-width: 70ch;
+			}
+
+			.grid {
+				margin-top: 18px;
+				display: grid;
+				grid-template-columns: repeat(12, 1fr);
+				gap: 14px;
+			}
+
+			.card {
+				grid-column: span 12;
+				border: 1px solid var(--border);
+				border-radius: var(--radius);
+				background: var(--surface);
+				padding: 16px;
+			}
+
+			.card h2 {
+				margin: 0 0 10px;
+				font-size: 18px;
+			}
+			.card p {
+				margin: 0;
+				color: var(--muted);
+			}
+
+			.list {
+				margin: 10px 0 0;
+				padding-left: 18px;
+				color: var(--muted);
+			}
+			.list li {
+				margin: 6px 0;
+			}
+
+			.pillrow {
+				margin-top: 10px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 8px;
+			}
+			.pill {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 6px 10px;
+				border-radius: 999px;
+				border: 1px solid var(--border);
+				background: #ffffff;
+				color: var(--muted);
+				font-size: 13px;
+			}
+
+			.footer {
+				margin-top: 18px;
+				padding: 14px 18px;
+				border: 1px solid var(--border);
+				border-radius: var(--radius);
+				color: var(--muted);
+				font-size: 13px;
+				background: #ffffff;
+			}
+
+			@media (min-width: 720px) {
+				.hero {
+					padding: 28px 24px;
+				}
+
+				.card {
+					padding: 18px;
+				}
+
+				.card.span-6 {
+					grid-column: span 6;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="topbar">
+				<div class="brand">
+					<div class="brand-title">Kongu + GUVI Collaboration</div>
+					<div class="brand-subtitle">A simple single-page overview</div>
+				</div>
+				<nav class="nav" aria-label="Page">
+					<a href="#about">About</a>
+					<a href="#highlights">Highlights</a>
+					<a href="#activities">Activities</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</div>
+
+			<header class="hero">
+				<h1>Kongu and GUVI working together</h1>
+				<p>
+					This page briefly showcases a collaboration focused on skill development, hands-on learning,
+					and career readiness through structured training and practical activities.
+				</p>
+				<div class="pillrow" aria-label="Focus areas">
+					<span class="pill">Workshops</span>
+					<span class="pill">Mentorship</span>
+					<span class="pill">Projects</span>
+					<span class="pill">Placements support</span>
+				</div>
+			</header>
+
+			<main class="grid">
+				<section id="about" class="card span-6" aria-labelledby="about-title">
+					<h2 id="about-title">About the collaboration</h2>
+					<p>
+						Kongu and GUVI collaborate to bring industry-aligned learning to students through guided
+						sessions, practice assignments, and real-world projects.
+					</p>
+				</section>
+
+				<section id="highlights" class="card span-6" aria-labelledby="highlights-title">
+					<h2 id="highlights-title">Highlights</h2>
+					<ul class="list">
+						<li>Structured learning tracks with clear outcomes</li>
+						<li>Hands-on practice with regular checkpoints</li>
+						<li>Project-based learning to build portfolios</li>
+						<li>Career guidance and interview preparation support</li>
+					</ul>
+				</section>
+
+				<section id="activities" class="card" aria-labelledby="activities-title">
+					<h2 id="activities-title">Activities & outcomes</h2>
+					<ul class="list">
+						<li>Intro sessions, bootcamps, and technical workshops</li>
+						<li>Mini projects to apply concepts immediately</li>
+						<li>Capstone-style team projects for real collaboration</li>
+						<li>Progress tracking and feedback cycles</li>
+					</ul>
+				</section>
+
+				<section id="contact" class="card" aria-labelledby="contact-title">
+					<h2 id="contact-title">Contact</h2>
+					<p>
+						To add official details (department, coordinator name, email, or schedule), update this section.
+						You can also link to your official announcement page.
+					</p>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<span>Last updated: February 10, 2026</span>
+				<span aria-hidden="true"> · </span>
+				<span>Single-page site (HTML + CSS)</span>
+			</footer>
+		</div>
+	</body>
+</html>
